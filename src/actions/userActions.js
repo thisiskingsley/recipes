@@ -41,7 +41,7 @@ export const createUsers =
 		const body = JSON.stringify({ username, password });
 
 		axios
-			.post('/api/users', body, config)
+			.post(`${process.env.REACT_APP_API_HOST}/api/users`, body, config)
 			.then(res => {
 				// sent to the authReducer
 				dispatch({ type: REGISTER_SUCCESS, payload: res.data });
@@ -58,7 +58,7 @@ export const createUsers =
 	};
 
 export const fetchUsers = () => async dispatch => {
-	const response = await axios.get('/api/users');
+	const response = await axios.get(`${process.env.REACT_APP_API_HOST}/api/users`);
 
 	dispatch({ type: FETCH_USERS, payload: response.data });
 };

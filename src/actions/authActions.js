@@ -24,7 +24,7 @@ export const loadUser = () => (dispatch, getState) => {
 
 	//PASS IN TOKEN CONFIGURED AS JSON
 	axios
-		.get('/api/auth/user', tokenConfig(getState))
+		.get(`${process.env.REACT_APP_API_HOST}/api/auth/user`, tokenConfig(getState))
 		.then(res =>
 			dispatch({
 				type: USER_LOADED,
@@ -54,7 +54,7 @@ export const login =
 		const body = JSON.stringify({ username, password });
 
 		axios
-			.post('/api/auth', body, config)
+			.post(`${process.env.REACT_APP_API_HOST}/api/auth`, body, config)
 			.then(res => {
 				dispatch({ type: LOGIN_SUCCESS, payload: res.data });
 				history.push('/user');
