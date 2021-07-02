@@ -1,0 +1,133 @@
+@media only screen and (max-width: 600px) {
+    #user-header .welcome {
+        position: absolute;
+		top: 10vh;
+		left: 30vw;
+    }
+
+	#recipe-list {
+	position: absolute;
+	top: 20vh;
+	max-height: 80vh;
+}
+}
+
+#recipe-summary {
+	color: white;
+	position: absolute;
+	top: 50%;
+}
+
+#login-form .compact {
+	display: flex;
+	justify-content: center;
+	width: 80%;
+}
+
+#signup-form {
+	position: relative;
+	top: 20vh;
+	left: 5vw;
+}
+
+#signup-form label {
+	width: 200px;
+	display: flex;
+	justify-content: flex-end;
+	color: white;
+}
+
+#signup-form button {
+	position: absolute;
+	left: 67%;
+}
+
+#no-recipes {
+	color: white;
+}
+
+#recipe-list {
+	position: absolute;
+	color: white;
+	overflow-y: auto;
+	overflow-x: hidden;
+	max-height: 80vh;
+}
+
+#recipe-list .grid {
+	border: solid 1px black;
+}
+
+#recipe-list .fluid {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#recipe-form {
+	position: absolute;
+	display: flex;
+	left: 5%;
+	right: 5%;
+	bottom: 50%;
+}
+
+#recipe-form input {
+	width: 70vw;
+	margin-right: 10px;
+}
+
+#recipe-form .error {
+	color: red;
+}
+
+/* background image and video */
+#background {
+	position: fixed;
+	width: 100%;
+	left: 50%;
+	top: 50%;
+	height: 100%;
+	object-fit: cover;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+}
+
+
+/* logged in header*/
+#user-header .item {
+	color: white;
+	font-size: 1.1em;
+}
+
+#user-header .fa-house-user {
+	/* icon */
+	color: yellow;
+}
+
+#user-header .title {
+	color: white;
+	font-size: 2em;
+	padding-left: 5%;
+}
+
+/* guest header */
+#guest-header .right .item {
+	color: white;
+	font-size: 1.1em;
+}
+
+#guest-header .fas {
+	/* icon */
+	color: white;
+}
+
+#guest-header .title {
+	color: white;
+	font-size: 2em;
+	padding-left: 5%;
+}
+
+#login-modal {
+	position: fixed;
+}
